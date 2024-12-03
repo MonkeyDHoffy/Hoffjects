@@ -1,0 +1,26 @@
+let notes = ['Notiz 1', 'Notiz 2', 'Notiz 3'];
+
+// Array in JSON-String umwandeln
+let notesJSON = JSON.stringify(notes);
+
+// JSON-String im Local Storage speichern
+localStorage.setItem('notes', notesJSON);
+Array aus dem Local Storage abrufen:
+
+javascript
+// JSON-String aus dem Local Storage abrufen
+let storedNotesJSON = localStorage.getItem('notes');
+
+// JSON-String wieder in ein Array umwandeln
+let storedNotes = JSON.parse(storedNotesJSON);
+
+console.log(storedNotes); // Ausgabe: ['Notiz 1', 'Notiz 2', 'Notiz 3']
+
+// Erklärung:
+// JSON.stringify(): Wandelt das Array in einen JSON-String um.
+
+// localStorage.setItem('key', value): Speichert den JSON-String im Local Storage unter einem bestimmten Schlüssel (hier 'notes').
+
+// localStorage.getItem('key'): Ruft den JSON-String aus dem Local Storage ab.
+
+// JSON.parse(): Wandelt den JSON-String zurück in ein Array.

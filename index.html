@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Moul&family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Sniglet:wght@400;800&display=swap"
+        rel="stylesheet">
+
+    <script src="./scripts/template.js"></script>
+    <script src="./script.js"></script>
+    <script src="./scripts/local-storage.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/assets.css">
+    <link rel="stylesheet" href="./style/standard.css">
+</head>
+
+<body onload="renderNotes(); init();">
+    <div class="main-header">
+        <h1>Notizblock</h1>
+    </div>
+    <section class="InputStyle">
+        <input type="text" class="blubb" id="input-notes" placeholder="add notes...">
+        <button class="blubb" id="input-button" onclick="addNote()">Notizen aufschreiben</button>
+    </section>
+
+    <div class="space_between4px"></div>
+
+    <section class="InputStyle">
+        <button class="blubb" id="input-button" onclick="saveLocal()">Notizen speichern (local storage)</button>
+    </section>
+
+
+    <div class="space_between1"></div>
+
+    <div class="content-style" id="content" style="margin: 0 64px; border-radius:5px;"></div>
+
+
+    <div class="space_between1"></div>
+
+    <div class="InputStyle">
+        <button class="blubb" onclick="deleteNotes()">Alle Notizen löschen</button>
+    </div>
+
+    <div class="space_between4px"></div>
+
+    <div class="InputStyle">
+        <button class="blubb" onclick="deleteLastNotes()">Letzte Notiz löschen</button>
+    </div>
+
+    <div class="space_between1"></div>
+
+    <div class="content-style" id="trash_content" style="margin: 0 64px; border-radius:5px;"></div>
+
+    <div class="InputStyle">
+        <button class="blubb" onclick="deleteTrash()">Papierkorb leeren</button>
+    </div>
+
+    <br><br>
+    <hr>
+    <section class="InputStyle">
+        <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+        <p>Clickcount:</p>
+        <p id="demo"></p>
+    </section>
+    <hr>
+</body>
+
+</html>

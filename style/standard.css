@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.space_between1 {
+    height: 8px;
+}
+
+.space_between4px {
+    height: 4px;
+}
